@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForms();
   initTabs();
   initBlogFilters();
+  initFaqAccordions();
 });
 
 /* --- Sticky Header --- */
@@ -213,24 +214,50 @@ function initTabs() {
 
   if (tabBtns.length === 0) return;
 
+  const activateTab = (targetId) => {
+    // Set active button
+    tabBtns.forEach(b => {
+      if (b.getAttribute('data-tab') === targetId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    // Set active panel
+    tabPanels.forEach(panel => {
+      if (panel.id === targetId) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+  };
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.getAttribute('data-tab');
-
-      // Set active button
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Set active panel
-      tabPanels.forEach(panel => {
-        if (panel.id === targetId) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
+      activateTab(targetId);
     });
   });
+
+  // Check URL query parameters for deep linking
+  const params = new URLSearchParams(window.location.search);
+  const requestedTab = params.get('tab');
+  const tabMapping = {
+    'ceza': 'criminal-law',
+    'kamu': 'criminal-law',
+    'aile': 'private-law',
+    'gayrimenkul': 'private-law',
+    'kira': 'private-law',
+    'ticaret': 'corporate-law',
+    'icra': 'corporate-law',
+    'is': 'corporate-law'
+  };
+
+  if (requestedTab && tabMapping[requestedTab]) {
+    activateTab(tabMapping[requestedTab]);
+  }
 }
 
 /* --- Dynamic Search & Filter Logic (blog.html) --- */
@@ -272,3 +299,44 @@ function initBlogFilters() {
   if (searchInput) searchInput.addEventListener('input', filterPosts);
   if (filterSelect) filterSelect.addEventListener('change', filterPosts);
 }
+
+/* --- FAQ Accordions --- */
+function initFaqAccordions() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems.length === 0) return;
+
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    if (!questionBtn || !answer) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all other FAQ items (Accordion mode)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          if (otherAnswer) {
+            otherAnswer.style.maxHeight = '0';
+            otherAnswer.style.opacity = '0';
+          }
+        }
+      });
+
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove('active');
+        answer.style.maxHeight = '0';
+        answer.style.opacity = '0';
+      } else {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.opacity = '1';
+      }
+    });
+  });
+}
+
