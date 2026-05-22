@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veritas Hukuk Bürosu ile iletişime geçin. Ankara Çankaya ofis adresi, telefon numarası, e-posta adresi ve randevu formu.">
+  <title>İletişim & Harita | Veritas Hukuk Bürosu</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .contact-info-list {
+      list-style: none;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+    .contact-info-list .icon-box {
+      width: 48px;
+      height: 48px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition-fast);
+    }
+    .contact-info-list li:hover .icon-box {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    .contact-info-list svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent-gold);
+    }
+    .contact-info-list h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .contact-info-list p, .contact-info-list a {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 0;
+    }
+    .contact-info-list a:hover {
+      color: var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- --- Header / Nav --- -->
+  <header class="header">
+    <div class="container header-nav">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32">
+          <path d="M16 4v24M8 12h16M8 12l-4 8h8zM24 12l-4 8h8z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="4" r="1.5" fill="currentColor"/>
+          <path d="M12 28h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          VERITAS
+          <span>Hukuk & Danışmanlık</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+          <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+          <li><a href="hizmetler.html" class="nav-link">Hizmetlerimiz</a></li>
+          <li><a href="blog.html" class="nav-link">Duyurular</a></li>
+          <li><a href="kariyer.html" class="nav-link">Kariyer</a></li>
+          <li><a href="iletisim.html" class="nav-link active">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+903129116959" class="nav-phone">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.59.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.47.57 3.59.12.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+          +90 312 911 69 59
+        </a>
+        <button class="btn btn-gold-border js-appointment-trigger">Randevu Al</button>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Page Header --- -->
+  <section class="page-header">
+    <svg class="page-header-bg" viewBox="0 0 32 32">
+      <path d="M16 4v24M8 12h16M8 12l-4 8h8zM24 12l-4 8h8z" stroke="var(--accent-gold)" stroke-width="0.5" fill="none"/>
+    </svg>
+    <div class="container">
+      <h1 class="page-title reveal">İletişim</h1>
+      <ul class="breadcrumbs reveal" style="transition-delay: 0.1s;">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li class="active">İletişim</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- --- Contact Section --- -->
+  <section class="section-primary">
+    <div class="container grid-2">
+      
+      <!-- Contact Details & Map Left -->
+      <div class="reveal-left">
+        <span class="section-subtitle">Ofis Bilgileri</span>
+        <h2 class="section-title left-align">Bizimle İletişime Geçin</h2>
+        <p>Hukuki uyuşmazlıklarınızda yüz yüze görüşmek için Ankara Çankaya'daki ofisimize gelebilir veya telefon/e-posta yoluyla bize ulaşabilirsiniz.</p>
+        
+        <ul class="contact-info-list">
+          <!-- Address -->
+          <li>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <h4>Ofis Adresi</h4>
+              <p>Kızılırmak Mh. 1443. Cd. No:25 Çankaya / Ankara</p>
+            </div>
+          </li>
+          
+          <!-- Phone -->
+          <li>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.59.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.47.57 3.59.12.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <h4>Telefon</h4>
+              <a href="tel:+903129116959">+90 312 911 69 59</a>
+            </div>
+          </li>
+
+          <!-- Email -->
+          <li>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <h4>E-Posta</h4>
+              <a href="mailto:info@veritashukuk.com">info@veritashukuk.com</a>
+            </div>
+          </li>
+
+          <!-- Hours -->
+          <li>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <div>
+              <h4>Çalışma Saatleri</h4>
+              <p>Hafta İçi: 09:00 - 18:00 | Cumartesi: 10:00 - 14:00</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Elegant Mock Map SVG -->
+        <div style="border: 1px solid var(--border-color); background-color: var(--bg-secondary); overflow: hidden; height: 260px;">
+          <svg viewBox="0 0 500 260" style="width: 100%; height: 100%;">
+            <!-- Map Grid Roads -->
+            <rect width="500" height="260" fill="#0c0f14"/>
+            <!-- Roads lines -->
+            <path d="M-10 130h520" stroke="#1c2330" stroke-width="24" fill="none"/>
+            <path d="M-10 130h520" stroke="var(--bg-primary)" stroke-width="2" fill="none" stroke-dasharray="8 8"/>
+            <path d="M150 -10v280" stroke="#1c2330" stroke-width="20" fill="none"/>
+            <path d="M380 -10v280" stroke="#1c2330" stroke-width="20" fill="none"/>
+            <!-- Diagonals -->
+            <path d="M0 0l500 260" stroke="#151b24" stroke-width="8" fill="none"/>
+            
+            <!-- Road Labels -->
+            <text x="250" y="110" fill="var(--text-muted)" font-family="var(--font-body)" font-size="10" letter-spacing="1">KIZILIRMAK MAHALLESİ</text>
+            <text x="135" y="60" fill="var(--text-muted)" font-family="var(--font-body)" font-size="8" letter-spacing="1" transform="rotate(-90 135 60)">1443. CADDE</text>
+            <text x="365" y="60" fill="var(--text-muted)" font-family="var(--font-body)" font-size="8" letter-spacing="1" transform="rotate(-90 365 60)">MEVLANA BULVARI</text>
+            
+            <!-- Map Buildings -->
+            <rect x="30" y="30" width="80" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
+            <rect x="180" y="30" width="160" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
+            <rect x="30" y="170" width="90" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
+            
+            <!-- Veritas Office Building -->
+            <rect x="180" y="170" width="160" height="60" rx="3" fill="var(--bg-tertiary)" stroke="var(--accent-gold-border)" stroke-width="1"/>
+            
+            <!-- Location Pin -->
+            <g transform="translate(260, 190)">
+              <!-- Pin Glow -->
+              <circle cx="0" cy="0" r="14" fill="var(--accent-gold)" opacity="0.2">
+                <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Pin Shape -->
+              <path d="M0-12C-6.6-12-12-6.6-12 0c0 8.4 12 18 12 18s12-9.6 12-18c0-6.6-5.4-12-12-12zm0 16.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" fill="var(--accent-gold)"/>
+              <text x="16" y="4" fill="var(--accent-gold)" font-family="var(--font-branding)" font-size="11" font-weight="bold" letter-spacing="1">VERITAS HUKUK</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Built-in Appointment Form Right -->
+      <div class="reveal-right">
+        <div style="background-color: var(--bg-secondary); border: 1px solid var(--border-color); padding: 3.5rem;">
+          <h3 class="gold-text" style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">Randevu Talebi</h3>
+          <form id="appointment-form-direct">
+            <div class="form-group">
+              <label for="con-name" class="form-label">Adınız Soyadınız *</label>
+              <input type="text" id="con-name" class="form-control" placeholder="Ahmet Yılmaz" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="con-phone" class="form-label">Telefon Numaranız *</label>
+                <input type="tel" id="con-phone" class="form-control" placeholder="05xx xxx xx xx" required>
+              </div>
+              <div class="form-group">
+                <label for="con-email" class="form-label">E-Posta Adresiniz *</label>
+                <input type="email" id="con-email" class="form-control" placeholder="ahmet@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="con-service" class="form-label">Hukuki Konu *</label>
+                <select id="con-service" class="form-control" required>
+                  <option value="" disabled selected>Seçiniz</option>
+                  <option value="ceza">Ceza Hukuku</option>
+                  <option value="aile">Aile & Miras Hukuku</option>
+                  <option value="icra">İcra & İflas Hukuku</option>
+                  <option value="is">İş Hukuku</option>
+                  <option value="ticaret">Ticaret & Şirketler Hukuku</option>
+                  <option value="gayrimenkul">Gayrimenkul Hukuku</option>
+                  <option value="diger">Diğer Hukuki Konular</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="con-date" class="form-label">Tercih Edilen Tarih *</label>
+                <input type="date" id="con-date" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="con-message" class="form-label">Mesajınız / Kısa Detaylar</label>
+              <textarea id="con-message" class="form-control" placeholder="Lütfen randevu almak istediğiniz konu ve uyuşmazlığı kısaca özetleyin..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                <span>KVKK kapsamında kişisel verilerimin işlenmesini ve Veritas Hukuk tarafından bilgilendirme amacıyla kullanılmasını kabul ediyorum. *</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Talebi Gönder</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-logo-desc">
+        <a href="index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 32 32">
+            <path d="M16 4v24M8 12h16M8 12l-4 8h8zM24 12l-4 8h8z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="4" r="1.5" fill="currentColor"/>
+            <path d="M12 28h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text">
+            VERITAS
+            <span>Hukuk & Danışmanlık</span>
+          </div>
+        </a>
+        <p>Veritas Hukuk Bürosu, hukukun evrensel ilkelerine, dürüstlük ve şeffaflık ilkelerine bağlı kalarak yüksek kalitede avukatlık hizmeti sunmaktadır.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Önemli Linkler</h4>
+        <ul class="footer-links" style="margin-top: 1.5rem;">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+          <li><a href="blog.html">Duyurular</a></li>
+          <li><a href="kariyer.html">Kariyer</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Hizmet Alanları</h4>
+        <ul class="footer-links" style="margin-top: 1.5rem;">
+          <li><a href="hizmetler.html?tab=ceza">Ceza Hukuku</a></li>
+          <li><a href="hizmetler.html?tab=aile">Aile Hukuku</a></li>
+          <li><a href="hizmetler.html?tab=icra">İcra & İflas Hukuku</a></li>
+          <li><a href="hizmetler.html?tab=is">İş Hukuku</a></li>
+          <li><a href="hizmetler.html?tab=ticaret">Ticaret Hukuku</a></li>
+          <li><a href="hizmetler.html?tab=gayrimenkul">Gayrimenkul Hukuku</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Hızlı İletişim</h4>
+        <ul class="footer-contact-info" style="margin-top: 1.5rem;">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.59.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.47.57 3.59.12.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:+903129116959">+90 312 911 69 59</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:info@veritashukuk.com">info@veritashukuk.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Kızılırmak Mh. 1443. Cd. No:25 Çankaya/Ankara</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-disclaimer">
+        © 2026 Veritas Hukuk Bürosu. Tüm hakları saklıdır. Bu internet sitesinde yer alan tüm bilgiler Türkiye Barolar Birliği'nin meslek kuralları ve reklam yasağı yönetmeliklerine uygun olarak sadece genel bilgilendirme amacıyla sunulmuştur, hukuki tavsiye niteliğinde değildir.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="kvkk.html">KVKK Aydınlatma Metni</a>
+        <a href="gizlilik.html">Gizlilik Politikası</a>
+        <a href="iletisim.html">Randevu Al</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- Floating Contacts --- -->
+  <div class="floating-contact">
+    <a href="tel:+903129116959" class="floating-btn floating-phone" aria-label="Telefonla Arayın">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.59.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.47.57 3.59.12.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+    </a>
+    <a href="https://wa.me/905427948495" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp İletişim">
+      <svg viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 2.802 1.486 4.757 1.487 5.589 0 10.134-4.52 10.138-10.07.002-2.688-1.04-5.216-2.935-7.114C16.66 1.558 14.135.516 11.453.515 5.865.515 1.32 5.037 1.316 10.589c-.001 1.83.479 3.25 1.378 4.814l-.993 3.63 3.747-.98c1.512.924 2.502 1.4 4.519 1.4z"/>
+        <path d="M17.472 14.382c-.32-.16-1.89-.93-2.185-1.04-.3-.11-.515-.17-.73.15-.215.32-.83 1.04-1.02 1.25-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.575-1.595-.95-.85-1.6-1.9-1.785-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.3.32-.51.11-.215.05-.4-.03-.56-.08-.16-.73-1.77-1-2.43-.265-.64-.53-.55-.73-.56-.19-.01-.41-.01-.62-.01-.215 0-.56.08-.85.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.285 3.26.16.21 2.225 3.397 5.39 4.754.753.323 1.342.517 1.8.66.757.24 1.448.207 1.993.125.607-.09 1.89-.77 2.153-1.48.263-.7.263-1.3.188-1.43-.075-.125-.275-.205-.595-.365z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- --- Randevu Al Modal --- -->
+  <div class="modal" id="appointment-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Kapat">&times;</button>
+      <h3 class="modal-title">Randevu Talebi Oluşturun</h3>
+      <form id="appointment-form">
+        <div class="form-group">
+          <label for="app-name" class="form-label">Adınız Soyadınız *</label>
+          <input type="text" id="app-name" class="form-control" placeholder="Örn. Ahmet Yılmaz" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="app-phone" class="form-label">Telefon Numaranız *</label>
+            <input type="tel" id="app-phone" class="form-control" placeholder="05xx xxx xx xx" required>
+          </div>
+          <div class="form-group">
+            <label for="app-email" class="form-label">E-Posta Adresiniz *</label>
+            <input type="email" id="app-email" class="form-control" placeholder="ahmet@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="app-service" class="form-label">Hukuki Konu *</label>
+            <select id="app-service" class="form-control" required>
+              <option value="" disabled selected>Seçiniz</option>
+              <option value="ceza">Ceza Hukuku</option>
+              <option value="aile">Aile & Miras Hukuku</option>
+              <option value="icra">İcra & İflas Hukuku</option>
+              <option value="is">İş Hukuku</option>
+              <option value="ticaret">Ticaret & Şirketler Hukuku</option>
+              <option value="gayrimenkul">Gayrimenkul Hukuku</option>
+              <option value="diger">Diğer Hukuki Konular</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="app-date" class="form-label">Randevu Tarihi *</label>
+            <input type="date" id="app-date" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="app-message" class="form-label">Mesajınız / Kısa Açıklama</label>
+          <textarea id="app-message" class="form-control" placeholder="Lütfen hukuki uyuşmazlığınızı kısaca özetleyin..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" required>
+            <span>KVKK kapsamında kişisel verilerimin işlenmesini ve Veritas Hukuk tarafından bilgilendirme amacıyla kullanılmasını kabul ediyorum. *</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Talebi Gönder</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
