@@ -1,5 +1,5 @@
 /* 
-  Veritas Hukuk Bürosu - Main JS Interaction File
+  Özşahin Hukuk Bürosu - Main JS Interaction File
 */
 
 document.addEventListener('DOMContentLoaded', () => {
