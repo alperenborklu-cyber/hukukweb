@@ -1626,12 +1626,12 @@ textarea.form-control {
   width: 100%;
   height: 100%;
   border: 0;
-  /* Convert default map to high-end gold/dark theme with deeper blacks and brighter gold */
-  filter: invert(95%) grayscale(100%) sepia(100%) saturate(350%) hue-rotate(-10deg) brightness(120%) contrast(160%);
+  /* Convert default map to high-end gold/dark theme */
+  filter: invert(90%) hue-rotate(180deg) saturate(300%) sepia(100%) brightness(85%) contrast(120%);
   transition: var(--transition-smooth);
 }
 
 .google-map-wrapper:hover .google-map-iframe {
-  filter: invert(95%) grayscale(100%) sepia(100%) saturate(400%) hue-rotate(-10deg) brightness(130%) contrast(170%);
+  filter: invert(90%) hue-rotate(180deg) saturate(350%) sepia(100%) brightness(95%) contrast(120%);
 }
 
