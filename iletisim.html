@@ -164,44 +164,18 @@
           </li>
         </ul>
 
-        <!-- Elegant Mock Map SVG -->
-        <div style="border: 1px solid var(--border-color); background-color: var(--bg-secondary); overflow: hidden; height: 260px;">
-          <svg viewBox="0 0 500 260" style="width: 100%; height: 100%;">
-            <!-- Map Grid Roads -->
-            <rect width="500" height="260" fill="#0c0f14"/>
-            <!-- Roads lines -->
-            <path d="M-10 130h520" stroke="#1c2330" stroke-width="24" fill="none"/>
-            <path d="M-10 130h520" stroke="var(--bg-primary)" stroke-width="2" fill="none" stroke-dasharray="8 8"/>
-            <path d="M150 -10v280" stroke="#1c2330" stroke-width="20" fill="none"/>
-            <path d="M380 -10v280" stroke="#1c2330" stroke-width="20" fill="none"/>
-            <!-- Diagonals -->
-            <path d="M0 0l500 260" stroke="#151b24" stroke-width="8" fill="none"/>
-            
-            <!-- Road Labels -->
-            <text x="250" y="110" fill="var(--text-muted)" font-family="var(--font-body)" font-size="10" letter-spacing="1">KIZILAY</text>
-            <text x="135" y="60" fill="var(--text-muted)" font-family="var(--font-body)" font-size="8" letter-spacing="1" transform="rotate(-90 135 60)">TUNA CADDESİ</text>
-            <text x="365" y="60" fill="var(--text-muted)" font-family="var(--font-body)" font-size="8" letter-spacing="1" transform="rotate(-90 365 60)">ATATÜRK BULVARI</text>
-            
-            <!-- Map Buildings -->
-            <rect x="30" y="30" width="80" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
-            <rect x="180" y="30" width="160" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
-            <rect x="30" y="170" width="90" height="60" rx="3" fill="#11161f" stroke="#1e2736" stroke-width="1"/>
-            
-            <!-- Av. Mehmet Erşahin Office Building -->
-            <rect x="180" y="170" width="160" height="60" rx="3" fill="var(--bg-tertiary)" stroke="var(--accent-gold-border)" stroke-width="1"/>
-            
-            <!-- Location Pin -->
-            <g transform="translate(260, 190)">
-              <!-- Pin Glow -->
-              <circle cx="0" cy="0" r="14" fill="var(--accent-gold)" opacity="0.2">
-                <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
-              </circle>
-              <!-- Pin Shape -->
-              <path d="M0-12C-6.6-12-12-6.6-12 0c0 8.4 12 18 12 18s12-9.6 12-18c0-6.6-5.4-12-12-12zm0 16.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" fill="var(--accent-gold)"/>
-              <text x="16" y="4" fill="var(--accent-gold)" font-family="var(--font-branding)" font-size="11" font-weight="bold" letter-spacing="1">AV. MEHMET ERŞAHİN</text>
-            </g>
-          </svg>
+        <!-- Google Maps Embed -->
+        <div class="google-map-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?cid=16532027116568980128&output=embed&hl=tr" 
+            width="100%" 
+            height="260" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="google-map-iframe">
+          </iframe>
         </div>
       </div>
 
