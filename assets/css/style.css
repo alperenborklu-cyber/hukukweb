@@ -256,28 +256,56 @@ section {
   width: 100%;
   z-index: 1000;
   transition: var(--transition-smooth);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
 }
 
 .header-scrolled {
-  background-color: var(--bg-glass);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
-  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.8rem 0;
+  padding: 1.2rem 0;
   transition: var(--transition-smooth);
 }
 
 .header-scrolled .header-nav {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
+}
+
+/* Header link colors for readability on white background */
+.header .nav-link {
+  color: #1e293b;
+}
+
+.header .nav-link:hover, 
+.header .nav-link.active {
+  color: var(--accent-gold-dark);
+}
+
+.header .nav-phone {
+  color: #1e293b;
+}
+
+.header .nav-phone:hover {
+  color: var(--accent-gold-dark);
+}
+
+.header .logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Ensure mobile menu hamburger lines are visible on white background */
+.header .mobile-menu-btn span {
+  background-color: #1e293b;
 }
 
 .logo {
