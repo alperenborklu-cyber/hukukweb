@@ -1,5 +1,5 @@
 /* 
-  Özşahin Hukuk Bürosu - Main JS Interaction File
+  Av. Mehmet Erşahin - Main JS Interaction File
 */
 
 document.addEventListener('DOMContentLoaded', () => {
