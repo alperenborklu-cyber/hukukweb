@@ -263,7 +263,7 @@ section {
 .header-scrolled {
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 0.8rem 0;
+  padding: 0.92rem 0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
@@ -271,17 +271,18 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 0;
+  padding: 1.38rem 0;
   transition: var(--transition-smooth);
 }
 
 .header-scrolled .header-nav {
-  padding: 0.8rem 0;
+  padding: 0.92rem 0;
 }
 
-/* Header link colors for readability on white background */
+/* Header link colors and 15% size boost for readability on white background */
 .header .nav-link {
   color: #1e293b;
+  font-size: 0.92rem; /* 15% larger (was 0.8rem) */
 }
 
 .header .nav-link:hover, 
@@ -291,6 +292,7 @@ section {
 
 .header .nav-phone {
   color: #1e293b;
+  font-size: 1.035rem; /* 15% larger (was 0.9rem) */
 }
 
 .header .nav-phone:hover {
@@ -298,9 +300,13 @@ section {
 }
 
 .header .logo-img {
-  height: 48px;
+  height: 55px; /* 15% larger (was 48px) */
   width: auto;
   display: block;
+}
+
+.header .btn {
+  font-size: 0.98rem; /* 15% larger (was 0.85rem) */
 }
 
 /* Ensure mobile menu hamburger lines are visible on white background */
