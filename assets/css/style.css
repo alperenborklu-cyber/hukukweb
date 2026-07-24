@@ -279,10 +279,10 @@ section {
   padding: 0.92rem 0;
 }
 
-/* Header link colors and 15% size boost for readability on white background */
+/* Header link colors and size adjustment for readability on white background */
 .header .nav-link {
   color: #1e293b;
-  font-size: 0.92rem; /* 15% larger (was 0.8rem) */
+  font-size: 0.86rem; /* Reduced by 7% (was 0.92rem) */
 }
 
 .header .nav-link:hover, 
@@ -292,7 +292,7 @@ section {
 
 .header .nav-phone {
   color: #1e293b;
-  font-size: 1.035rem; /* 15% larger (was 0.9rem) */
+  font-size: 0.96rem; /* Reduced by 7% (was 1.035rem) */
 }
 
 .header .nav-phone:hover {
@@ -306,7 +306,7 @@ section {
 }
 
 .header .btn {
-  font-size: 0.98rem; /* 15% larger (was 0.85rem) */
+  font-size: 0.91rem; /* Reduced by 7% (was 0.98rem) */
 }
 
 /* Ensure mobile menu hamburger lines are visible on white background */
