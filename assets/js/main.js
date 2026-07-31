@@ -10,6 +10,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
+  initHeroSlider();
   initStickyHeader();
   initMobileMenu();
   initScrollAnimations();
@@ -397,5 +398,27 @@ function initThemeToggle() {
     localStorage.setItem('theme', newTheme);
   });
 }
+
+/* --- Hero Section Background Slideshow --- */
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  const slideInterval = 6000; // 6 seconds per slide
+
+  const nextSlide = () => {
+    // Fade out current slide
+    slides[currentSlide].classList.remove('active');
+    // Compute next slide index
+    currentSlide = (currentSlide + 1) % slides.length;
+    // Fade in next slide
+    slides[currentSlide].classList.add('active');
+  };
+
+  // Run cycle infinitely
+  setInterval(nextSlide, slideInterval);
+}
+
 
 
