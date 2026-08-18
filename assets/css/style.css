@@ -1176,6 +1176,10 @@ textarea.form-control {
   gap: 0.8rem;
 }
 
+.footer-contact-info li:first-child {
+  white-space: nowrap;
+}
+
 .footer-contact-info svg {
   width: 16px;
   height: 16px;
