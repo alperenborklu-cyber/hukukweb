@@ -301,7 +301,7 @@ section {
 .header-scrolled {
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 0.92rem 0;
+  padding: 0.64rem 0; /* Scaled down to 0.7x (was 0.92rem) */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
@@ -309,18 +309,18 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.38rem 0;
+  padding: 0.96rem 0; /* Scaled down to 0.7x (was 1.38rem) */
   transition: var(--transition-smooth);
 }
 
 .header-scrolled .header-nav {
-  padding: 0.92rem 0;
+  padding: 0.64rem 0; /* Scaled down to 0.7x (was 0.92rem) */
 }
 
 /* Header link colors and size adjustment for readability on white background */
 .header .nav-link {
   color: #1e293b;
-  font-size: 0.86rem; /* Reduced by 7% (was 0.92rem) */
+  font-size: 0.75rem; /* Scaled down to 0.7x for compactness (was 0.86rem) */
 }
 
 .header .nav-link:hover, 
@@ -330,7 +330,7 @@ section {
 
 .header .nav-phone {
   color: #1e293b;
-  font-size: 0.96rem; /* Reduced by 7% (was 1.035rem) */
+  font-size: 0.85rem; /* Scaled down to 0.7x for compactness (was 0.96rem) */
 }
 
 .header .nav-phone:hover {
@@ -338,13 +338,13 @@ section {
 }
 
 .header .logo-img {
-  height: 55px; /* 15% larger (was 48px) */
+  height: 38px; /* Scaled down to 0.7x (was 55px) */
   width: auto;
   display: block;
 }
 
 .header .btn {
-  font-size: 0.91rem; /* Reduced by 7% (was 0.98rem) */
+  font-size: 0.8rem; /* Scaled down to 0.7x for compactness (was 0.91rem) */
 }
 
 /* Ensure mobile menu hamburger lines are visible on white background */
